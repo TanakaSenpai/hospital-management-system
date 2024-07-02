@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
+import HomeBanner from "@/public/Images/banners/home-banner.png"
 
 import { FaLongArrowAltRight } from "react-icons/fa";
 import OurMedicalServices from "./components/homePage/OurMedicalServices";
@@ -22,7 +23,7 @@ whispers of hope and the walls breathe stories of belief.</h4>
           <p>Become a member of our hospital community? <Link href="/sign-up" className="text-primary">Sign up</Link></p>
         </div>
         <div className="hidden md:block w-2/4">
-          <Image src="/images/banners/home-banner.png" alt="banner" width={600} height={600} objectFit="cover" />
+          <Image src={HomeBanner} alt="banner" width={600} height={600} objectFit="cover" />
         </div>
       </div>
       <OurMedicalServices />
