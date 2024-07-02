@@ -4,10 +4,12 @@ import LoginImage from "@/public/Images/login.jpg"
 import "./styles.css"
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
+import { Label } from "@/components/ui/label";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 
 const SignUpPage = () => {
   return (
-    <div className='container mt-3 '>
+    <div className="container mt-3 ">
       <div class="box p-4">
         <div class="right-section w-full md:w-2/4">
           <div class="container w-full">
@@ -16,22 +18,12 @@ const SignUpPage = () => {
             </h2>
             <form>
               <div class="input-group">
-                <label for="first-name">First Name</label>
+                <label for="first-name">Name</label>
                 <input
                   type="text"
                   id="first-name"
                   name="first-name"
-                  placeholder="Enter Your First Name"
-                  required
-                />
-              </div>
-              <div class="input-group">
-                <label for="last-name">Last Name</label>
-                <input
-                  type="text"
-                  id="last-name"
-                  name="last-name"
-                  placeholder="Enter Your Last Name"
+                  placeholder="Enter Your Name"
                   required
                 />
               </div>
@@ -85,6 +77,19 @@ const SignUpPage = () => {
                   required
                 />
               </div>
+              <div className="mb-5">
+                <label >Have any Allergies?</label>
+                <RadioGroup defaultValue="comfortable" className="flex gap-8 mt-2">
+                  <div className="flex items-center space-x-2">
+                    <RadioGroupItem value="Yes" id="r2" />
+                    <Label htmlFor="r2">Yes</Label>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <RadioGroupItem value="No" id="r3" />
+                    <Label htmlFor="r3">No</Label>
+                  </div>
+                </RadioGroup>
+              </div>
               <div class="flex items-center gap-2 mb-3">
                 <input type="checkbox" id="terms" name="terms" required />
                 <label for="terms">
@@ -108,7 +113,9 @@ const SignUpPage = () => {
         </div>
         <div class="left-section bg-primary">
           <div class="content">
-            <h1 className='text-4xl font-semibold mb-5'>Care For Your health</h1>
+            <h1 className="text-4xl font-semibold mb-5">
+              We Care For Your health
+            </h1>
             <Image src={LoginImage} alt="Hospital Image" />
           </div>
         </div>
