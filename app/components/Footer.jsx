@@ -18,7 +18,7 @@ const Footer = () => {
   ];
 
   return (
-    <div className="bg-secondary py-10 flex items-center">
+    <div className="bg-secondary py-10 flex items-center mt-12">
       <div className="container grid grid-cols-1 lg:grid-cols-3 gap-5">
         <div className="flex flex-col gap-4">
           <Logo />
@@ -45,7 +45,7 @@ const Footer = () => {
             <h3 className="text-xl font-semibold text-primary">Find Us</h3>
             <div className="flex gap-4">
               {socials.map((social, i) => (
-                <Link href={social.link} key={i}>
+                <Link href={social.link} key={i} className="hover:text-primary">
                   {social.icon}
                 </Link>
               ))}

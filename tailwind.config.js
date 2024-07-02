@@ -70,7 +70,8 @@ module.exports = {
         "accordion-up": "accordion-up 0.2s ease-out",
       },
       backgroundImage: {
-        doctors_bg: "url(/Images/doctors/doctors-bg.png)"
+        doctors_bg: "url(/Images/doctors/doctors-bg.png)",
+        contact_bg: "url(/Images/contact.jpg)",
       }
     },
   },

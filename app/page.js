@@ -18,7 +18,7 @@ export default function Home() {
 of healing, where the pulses of compassion beats in tandem with the rhythm of life. 
 Welcome to <span className="text-primary">GENOCARE IN.</span>  where the  corridors echo with 
 whispers of hope and the walls breathe stories of belief.</h4>
-          <Link href="/book-appointment"><Button className="text-white my-3 text-[15px]">Book Appointment <span className="mx-2 text-xl"><FaLongArrowAltRight /></span></Button></Link>
+          <Link href="/book-appointment"><Button className="my-3 text-[15px]">Book Appointment <span className="mx-2 text-xl"><FaLongArrowAltRight /></span></Button></Link>
           <p>Become a member of our hospital community? <Link href="/sign-up" className="text-primary">Sign up</Link></p>
         </div>
         <div className="hidden md:block w-2/4">

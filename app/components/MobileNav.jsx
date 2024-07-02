@@ -1,13 +1,17 @@
 import React from "react";
 import {
   Sheet,
+  SheetClose,
   SheetContent,
+  SheetFooter,
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { RxHamburgerMenu } from "react-icons/rx";
 import Logo from "./Logo";
 import NavLink from "./NavLink";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 const MobileNav = ({ links }) => {
   return (
@@ -15,7 +19,7 @@ const MobileNav = ({ links }) => {
       <SheetTrigger>
         <RxHamburgerMenu className="text-lg" />
       </SheetTrigger>
-      <SheetContent>
+      <SheetContent className="flex flex-col justify-between">
         <SheetTitle>
           <Logo />
         </SheetTitle>
@@ -26,9 +30,19 @@ const MobileNav = ({ links }) => {
               label={link.label}
               href={link.href}
               dropdown={link.dropdown}
-            />
+              />
           ))}
         </div>
+        <SheetFooter>
+          <div className="flex flex-col w-full gap-3">
+            <Link href="/auth/sign-in">
+              <Button className="w-full">Sign in</Button>
+            </Link>
+            <Link href="/auth/sign-up">
+              <Button variant="outline" className="w-full">Sign up</Button>
+            </Link>
+          </div>
+        </SheetFooter>
       </SheetContent>
     </Sheet>
   );

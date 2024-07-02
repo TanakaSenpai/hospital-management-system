@@ -3,6 +3,7 @@ import MobileNav from "./MobileNav";
 import NavLink from "./NavLink";
 import Link from "next/link";
 import Logo from "./Logo";
+import { Button } from "@/components/ui/button";
 
 const navLinks = [
   { href: "/", label: "home" },
@@ -32,17 +33,11 @@ const Navbar = () => {
           ))}
         </div>
         <div className="flex gap-6 items-center">
-          <Link
-            href="/login"
-            className="text-white bg-primary px-3 py-1  rounded-sm"
-          >
-            Sign in
+          <Link href="/auth/sign-in">
+            <Button>Sign in</Button>
           </Link>
-          <Link
-            href="/login"
-            className="text-primary inner-border inner-border-primary  px-3 py-1  rounded-sm"
-          >
-            Sign up
+          <Link href="/auth/sign-up">
+            <Button variant="outline">Sign up</Button>
           </Link>
         </div>
       </div>

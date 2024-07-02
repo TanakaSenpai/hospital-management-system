@@ -1,0 +1,54 @@
+
+
+
+.bg-contact-image {
+    width: 100%;
+    min-height: 350px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.bg-overlay {
+    background: rgba(2, 66, 57, 0.63);
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
+
+.hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.pad1{
+    padding: 50px 20px ;
+
+}
+
+.contact .content {
+    min-width: 800px;
+    text-align: center;
+}
+
+.bread-crumb {
+    text-align: center;
+}
+
+.bread-crumb .button {
+    background: transparent;
+    border: none;
+    color: white;
+}
+
+.bread-crumb .button:hover{
+    color: rgb(144, 247, 247);
+}
+
+.contact .content h1 {
+    font-weight: 500;
+}
+

@@ -1,0 +1,38 @@
+.doctor-card {
+    width: 300px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+}
+
+.doctor-photo {
+    width: 100%;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.doctor-name {
+    font-size: 24px;
+    color: #333;
+}
+
+.specialization {
+    font-size: 18px;
+    color: #252121;
+}
+
+.bio {
+    font-size: 14px;
+    color: #363535;
+    margin: 10px 0;
+}
+
+.contact-info,
+.office-hours {
+    font-size: 14px;
+    color: #363535;
+    margin: 5px 0;
+}
