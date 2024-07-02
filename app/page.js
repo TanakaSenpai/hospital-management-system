@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
-import HomeBanner from "@/public/Images/banners/home-banner.png"
+import HomeBanner from "@/public/Images/banners/homeBanner.png"
 
 import { FaLongArrowAltRight } from "react-icons/fa";
 import OurMedicalServices from "./components/homePage/OurMedicalServices";
