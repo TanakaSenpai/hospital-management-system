@@ -5,7 +5,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Hospital Management System",
+  title: "Genocare In.",
   description: "This is a platform to manage your hospital easily and efficiently",
 };
 

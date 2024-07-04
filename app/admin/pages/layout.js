@@ -5,7 +5,7 @@ import TopBar from "@/app/admin/pages/components/TopBar"
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Admin - Hospital Management System",
+  title: "Admin - Genocare In.",
   description:
     "This is a platform to manage your hospital easily and efficiently",
 };
