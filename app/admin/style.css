@@ -1,0 +1,93 @@
+:root {
+    --primary-color: "#1cac70";
+}
+.box{
+    display: grid;
+    height: 100vh;
+    place-items: center;
+    background: #f3f5f4;
+}
+.wrapper{
+    width: 700px;
+    height: 350px;
+    background: #fff;
+    border-radius: 5px;
+}
+.wrapper .title{
+    line-height: 90px;
+    background: #1cac70;
+    text-align: center;
+    border-radius: 5px 5px 0 0;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 600;
+}
+.wrapper form{
+    padding: 30px 25px 25px 25px;
+}
+.wrapper form .row{
+    height: 45px;
+    margin-bottom: 25px;
+    position: relative;
+}
+.wrapper form .row input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    padding-left: 60px;
+    border-radius: 5px;
+    border: 1px solid lightgrey;
+    font-size: 16px
+}
+form .row input:focus{
+    border-color: primary;
+    box-shadow: inset 0px 0px 2px 2px rgba(26, 188, 156, 0.25);
+}
+.icon {
+    position: absolute;
+    width: 47px;
+    height: 100%;
+    color: #fff;
+    font-size: 18px;
+    background: #1cac70;
+    border: 1px solid #1cac70;
+    border-radius: 5px 0 0 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.wrapper form .pass{
+    margin: -8px 0 20px 0;
+}
+.wrapper form .pass a{
+    color: #1cac70;
+    font-size: 17px;
+    text-decoration: none;
+}
+.wrapper form .pass a:hover{
+    text-decoration: underline;
+}
+.wrapper form .button input{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    padding-left: 0px;
+    background: #1cac70;
+    border: 1px solid #1cac70;
+    cursor: pointer;
+}
+form .button input:hover{
+    background: #1cac70;
+}
+.wrapper form .signup-link{
+    text-align: center;
+    margin-top: 20px;
+}
+.wrapper form .signup-link a{
+    color: #1cac70;
+    font-size: 18px;
+    text-decoration: none;
+}
+form .signup-link a:hover{
+    text-decoration: underline;
+}

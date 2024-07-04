@@ -105,13 +105,13 @@ const SignUpPage = () => {
             </form>
             <p className="mt-2">
               Already have an account?{" "}
-              <Link href="/auth/sign-in" className="text-primary">
+              <Link href="/public/auth/sign-in" className="text-primary">
                 Log in
               </Link>
             </p>
           </div>
         </div>
-        <div class="left-section bg-primary">
+        <div class="left-section bg-primary hidden md:block">
           <div class="content">
             <h1 className="text-4xl font-semibold mb-5">
               We Care For Your health

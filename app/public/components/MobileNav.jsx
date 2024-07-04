@@ -1,7 +1,6 @@
 import React from "react";
 import {
   Sheet,
-  SheetClose,
   SheetContent,
   SheetFooter,
   SheetTitle,
@@ -35,10 +34,10 @@ const MobileNav = ({ links }) => {
         </div>
         <SheetFooter>
           <div className="flex flex-col w-full gap-3">
-            <Link href="/auth/sign-in">
+            <Link href="/public/auth/sign-in">
               <Button className="w-full">Sign in</Button>
             </Link>
-            <Link href="/auth/sign-up">
+            <Link href="/public/auth/sign-up">
               <Button variant="outline" className="w-full">Sign up</Button>
             </Link>
           </div>

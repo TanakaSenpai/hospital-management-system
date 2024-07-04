@@ -1,6 +1,6 @@
 import React from "react";
 import doctors from "@/app/api/doctors/doctosData";
-import DoctorsCard from "@/app/components/DoctorsCard";
+import DoctorsCard from "@/app/public/components/DoctorsCard";
 
 const Doctors = () => {
   

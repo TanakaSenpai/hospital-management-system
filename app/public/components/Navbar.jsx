@@ -6,13 +6,13 @@ import Logo from "./Logo";
 import { Button } from "@/components/ui/button";
 
 const navLinks = [
-  { href: "/", label: "home" },
+  { href: "/public", label: "home" },
   {
-    href: "/book-appointment",
+    href: "/public/book-appointment",
     label: "book appointment",
   },
-  { href: "/doctors", label: "doctors" },
-  { href: "/contact", label: "contact us" },
+  { href: "/public/doctors", label: "doctors" },
+  { href: "/public/contact", label: "contact us" },
 ];
 
 const Navbar = () => {
@@ -33,10 +33,10 @@ const Navbar = () => {
           ))}
         </div>
         <div className="flex gap-6 items-center">
-          <Link href="/auth/sign-in">
+          <Link href="/public/auth/sign-in">
             <Button>Sign in</Button>
           </Link>
-          <Link href="/auth/sign-up">
+          <Link href="/public/auth/sign-up">
             <Button variant="outline">Sign up</Button>
           </Link>
         </div>
