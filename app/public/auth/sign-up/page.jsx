@@ -1,13 +1,38 @@
-import Image from 'next/image'
-import React from 'react'
-import LoginImage from "@/public/Images/login.jpg"
-import "./styles.css"
-import { Button } from '@/components/ui/button'
-import Link from 'next/link'
+"use client";
+import Image from "next/image";
+import React, { useState } from "react";
+import LoginImage from "@/public/Images/login.jpg";
+import "./styles.css";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
+import { auth } from "@/app/config/firebase";
 
 const SignUpPage = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [age, setAge] = useState("");
+  const [height, setHeight] = useState("");
+  const [weight, setWeight] = useState("");
+  const [allergies, setAllergies] = useState("");
+  const [password, setPassword] = useState("");
+
+  const [createUserWithEmailAndPassword] =
+    useCreateUserWithEmailAndPassword(auth);
+
+  const handleSignUp = async (e) => {
+    e.preventDefault()
+    try {
+      const res = await createUserWithEmailAndPassword(email, password)
+      setEmail("");
+      setPassword("");
+    } catch (err) {
+      console.log(err)
+    }
+  }
+
   return (
     <div className="container mt-3 ">
       <div class="box p-4">
@@ -18,11 +43,14 @@ const SignUpPage = () => {
             </h2>
             <form>
               <div class="input-group">
-                <label for="first-name">Name</label>
+                <label for="name">Name</label>
                 <input
+                  onChange={(e) => {
+                    setName(e.target.value);
+                  }}
                   type="text"
-                  id="first-name"
-                  name="first-name"
+                  id="name"
+                  name="name"
                   placeholder="Enter Your Name"
                   required
                 />
@@ -30,6 +58,9 @@ const SignUpPage = () => {
               <div class="input-group">
                 <label for="email">Email Address</label>
                 <input
+                  onChange={(e) => {
+                    setEmail(e.target.value);
+                  }}
                   type="email"
                   id="email"
                   name="email"
@@ -38,8 +69,24 @@ const SignUpPage = () => {
                 />
               </div>
               <div class="input-group">
+                <label for="age">Age</label>
+                <input
+                  onChange={(e) => {
+                    setAge(e.target.value);
+                  }}
+                  type="number"
+                  id="age"
+                  name="age"
+                  placeholder="Enter your age"
+                  required
+                />
+              </div>
+              <div class="input-group">
                 <label for="height">Height</label>
                 <input
+                  onChange={(e) => {
+                    setHeight(e.target.value);
+                  }}
                   type="height"
                   id="height"
                   name="height"
@@ -50,6 +97,9 @@ const SignUpPage = () => {
               <div class="input-group">
                 <label for="weight">Weight</label>
                 <input
+                  onChange={(e) => {
+                    setWeight(e.target.value);
+                  }}
                   type="weight"
                   id="weight"
                   name="weight"
@@ -60,6 +110,9 @@ const SignUpPage = () => {
               <div class="input-group">
                 <label for="password">Password</label>
                 <input
+                  onChange={(e) => {
+                    setPassword(e.target.value);
+                  }}
                   type="password"
                   id="password"
                   name="password"
@@ -67,39 +120,24 @@ const SignUpPage = () => {
                   required
                 />
               </div>
-              <div class="input-group">
-                <label for="confirm-password">Confirm Password</label>
-                <input
-                  type="password"
-                  id="confirm-password"
-                  name="confirm-password"
-                  placeholder="Confirm Your Password"
-                  required
-                />
-              </div>
               <div className="mb-5">
-                <label >Have any Allergies?</label>
-                <RadioGroup defaultValue="comfortable" className="flex gap-8 mt-2">
+                <label>Have any Allergies?</label>
+                <RadioGroup
+                  defaultValue={allergies}
+                  className="flex gap-8 mt-2"
+                  onChange={(e) => setAllergies(e.target.value)}
+                >
                   <div className="flex items-center space-x-2">
-                    <RadioGroupItem value="Yes" id="r2" />
-                    <Label htmlFor="r2">Yes</Label>
+                    <RadioGroupItem value="Yes" id="r1" />
+                    <Label htmlFor="r1">Yes</Label>
                   </div>
                   <div className="flex items-center space-x-2">
-                    <RadioGroupItem value="No" id="r3" />
-                    <Label htmlFor="r3">No</Label>
+                    <RadioGroupItem value="No" id="r2" />
+                    <Label htmlFor="r2">No</Label>
                   </div>
                 </RadioGroup>
               </div>
-              <div class="flex items-center gap-2 mb-3">
-                <input type="checkbox" id="terms" name="terms" required />
-                <label for="terms">
-                  I accept all the{" "}
-                  <Link href="#" className="text-primary">
-                    terms and conditions
-                  </Link>
-                </label>
-              </div>
-              <Button type="submit" className="w-full">
+              <Button type="submit" onClick={handleSignUp} className="w-full">
                 Sign Up
               </Button>
             </form>
@@ -122,6 +160,6 @@ const SignUpPage = () => {
       </div>
     </div>
   );
-}
+};
 
-export default SignUpPage
+export default SignUpPage;

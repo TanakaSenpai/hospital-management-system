@@ -25,7 +25,7 @@ const DoctorsPage = () => {
                 <td>{item.email}</td>
                 <td>{item.availablity}</td>
                 <td className="flex gap-3">
-                  <Button className="button">Edit</Button>
+                  {/* <Button className="button">Edit</Button> */}
                   <Button
                     variant="outline"
                     className="button text-red-500 border-red-500"

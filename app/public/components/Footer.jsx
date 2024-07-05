@@ -34,9 +34,9 @@ const Footer = () => {
           <div className="flex flex-col gap-4">
             <p className="text-primary font-semibold text-xl">Quick Links</p>
             <div className="flex flex-col">
-              <Link href="/book-appointment">Book an appointment</Link>
-              <Link href="/login">Sign in</Link>
-              <Link href="/doctors">Doctors</Link>
+              <Link href="/public/book-appointment" className="hover:text-primary">Book an appointment</Link>
+              <Link href="/public/doctors" className="hover:text-primary">See our doctors</Link>
+              <Link href="/public/contact" className="hover:text-primary">Contact Us</Link>
             </div>
           </div>
         </div>

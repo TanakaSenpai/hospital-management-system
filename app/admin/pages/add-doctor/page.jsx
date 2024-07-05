@@ -35,7 +35,7 @@ const page = () => {
             </div>
           </div>
 
-          <button type="submit">Add Doctor</button>
+          <button type="submit" className="bg-primary">Add Doctor</button>
         </form>
       </div>
     </div>
